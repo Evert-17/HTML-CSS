@@ -12,6 +12,7 @@
         table{
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th{
@@ -30,6 +31,12 @@
             color: white;
         }
 
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+
         tbody > tr:nth-child(odd){
             background-color: white;
         }
@@ -44,6 +51,9 @@
         }
         td.nub{
             text-align: right;
+        }
+        tfoot > tr > td.total{
+            text-align: center;
         }
     </style>
 </head>
@@ -187,7 +197,7 @@
             </tr>
             <tr>
                 <td class="posic">26</td>
-                <td>AmapÃ¡</td>
+                <td>Amapá</td>
                 <td class="nub">877.613</td>
             </tr>
             <tr>
@@ -201,7 +211,7 @@
             <tr>
                 <th scope="row">Total de Habitantes</th>
                 
-                <td>213.317.639</td>               
+                <td class="total" colspan="2">213.317.639</td>               
             </tr>
         </tfoot>
     </table>
